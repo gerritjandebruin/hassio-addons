@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.9
+
+- Fix ingress not reachable by binding to `0.0.0.0` instead of `127.0.0.1`.
+- Use `pathlib` in `fava_ingress.py`.
+- Log message when Fava is started.
+
 ## 1.0.8
 
 - Fix `uv` not found during Docker build by adding `/root/.local/bin` to `PATH`.
