@@ -1,6 +1,6 @@
 name: "Fava"
 description: "Fava is a web interface for Beancount, a double-entry bookkeeping system."
-version: "1.0.4"
+version: "1.0.5"
 slug: "fava"
 init: false
 arch:
@@ -14,7 +14,7 @@ ingress_port: 5000
 panel_icon: "mdi:currency-usd"
 panel_title: "Fava"
 map:
-  - share:ro
+  - share:rw
 options:
   beancount_file: "/share/beancount/finances.beancount"
 schema:
