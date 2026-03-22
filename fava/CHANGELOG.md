@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.8
+
+- Fix `uv` not found during Docker build by adding `/root/.local/bin` to `PATH`.
+
 ## 1.0.7
 
 - Update base images from Python 3.12 / Alpine 3.18 to Python 3.13 / Alpine 3.21.
