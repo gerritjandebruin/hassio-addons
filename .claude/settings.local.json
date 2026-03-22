@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:developers.home-assistant.io)",
+      "WebSearch",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(curl -sI https://developers.home-assistant.io/docs/add-ons/configuration)",
+      "Bash(curl -sIL https://developers.home-assistant.io/docs/add-ons/configuration)",
+      "Bash(curl -sL https://developers.home-assistant.io/docs/add-ons/configuration)",
+      "WebFetch(domain:pypi.org)"
+    ]
+  }
+}
