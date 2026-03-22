@@ -2,6 +2,7 @@
 
 BEANCOUNT_FILE=$(bashio::config 'beancount_file')
 INGRESS_PORT=$(bashio::addon.ingress_port)
+INGRESS_ENTRY=$(bashio::addon.ingress_entry)
 
 bashio::log.info "Starting Fava with file: ${BEANCOUNT_FILE}"
 
@@ -10,4 +11,4 @@ if [ ! -r "${BEANCOUNT_FILE}" ]; then
     exit 1
 fi
 
-exec fava --host 0.0.0.0 --port "${INGRESS_PORT}" "${BEANCOUNT_FILE}"
+exec fava --host 0.0.0.0 --port "${INGRESS_PORT}" --prefix "${INGRESS_ENTRY}" "${BEANCOUNT_FILE}"
