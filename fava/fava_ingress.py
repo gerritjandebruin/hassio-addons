@@ -8,6 +8,7 @@ a mismatch (white screen).
 This wrapper sets SCRIPT_NAME so Flask generates correct URLs with the
 ingress prefix, while keeping routing at / where the requests actually arrive.
 """
+import os
 import sys
 
 from cheroot.wsgi import Server
@@ -27,9 +28,14 @@ class IngressMiddleware:
 
 
 def main():
-    beancount_file = sys.argv[1]
+    beancount_file = os.path.abspath(sys.argv[1])
     port = int(sys.argv[2])
     prefix = sys.argv[3] if len(sys.argv) > 3 else ""
+
+    # Add beancount file directory to sys.path so plugins can be found
+    beancount_dir = os.path.dirname(beancount_file)
+    if beancount_dir not in sys.path:
+        sys.path.insert(0, beancount_dir)
 
     app = create_app([beancount_file])
 

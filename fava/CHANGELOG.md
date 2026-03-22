@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.6
+
+- Directory van het beancount-bestand wordt toegevoegd aan `sys.path` zodat lokale plugins gevonden worden.
+
 ## 1.0.5
 
 - Share-mapping gewijzigd van `ro` naar `rw` zodat Fava transacties kan bewerken.
