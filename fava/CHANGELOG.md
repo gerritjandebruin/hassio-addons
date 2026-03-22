@@ -2,37 +2,37 @@
 
 ## 1.0.6
 
-- Directory van het beancount-bestand wordt toegevoegd aan `sys.path` zodat lokale plugins gevonden worden.
+- Add beancount file directory to `sys.path` so local plugins can be found.
 
 ## 1.0.5
 
-- Share-mapping gewijzigd van `ro` naar `rw` zodat Fava transacties kan bewerken.
+- Change share mapping from `ro` to `rw` so Fava can edit transactions.
 
 ## 1.0.4
 
-- Wit scherm bij openen Web UI via ingress opgelost.
-- WSGI-wrapper (`fava_ingress.py`) toegevoegd die `SCRIPT_NAME` correct instelt voor Home Assistant ingress.
+- Fix white screen when opening Web UI via ingress.
+- Add WSGI wrapper (`fava_ingress.py`) that correctly sets `SCRIPT_NAME` for Home Assistant ingress.
 
 ## 1.0.3
 
-- Build-dependencies (`build-base`, `python3-dev`, `bison`, `flex`) toegevoegd voor compilatie van beancount 3.x.
-- Build-dependencies worden na installatie weer verwijderd om image-grootte te beperken.
-- Share-mapping (`share:ro`) toegevoegd zodat de add-on bestanden uit `/share` kan lezen.
-- Ingress-prefix (`--prefix`) doorgegeven aan Fava voor correcte URL-generatie.
+- Add build dependencies (`build-base`, `python3-dev`, `bison`, `flex`) for beancount 3.x compilation.
+- Remove build dependencies after installation to reduce image size.
+- Add share mapping (`share:ro`) so the add-on can read files from `/share`.
+- Pass ingress prefix (`--prefix`) to Fava for correct URL generation.
 
 ## 1.0.2
 
-- Base images gewijzigd naar Python 3.12 op Alpine 3.18.
+- Update base images to Python 3.12 on Alpine 3.18.
 
 ## 1.0.1
 
-- Fava geüpdatet van 1.27.1 naar 1.30.12.
-- Base images gewijzigd van `base` naar `base-python`.
-- Package-installatie overgeschakeld naar `uv`.
+- Update Fava from 1.27.1 to 1.30.12.
+- Change base images from `base` to `base-python`.
+- Switch package installation to `uv`.
 
 ## 1.0.0
 
-- Eerste versie van de Fava add-on voor Home Assistant.
-- Ondersteunt alle architecturen: aarch64, amd64, armhf, armv7, i386.
-- Ingress-ondersteuning voor directe toegang via de Home Assistant zijbalk.
-- Configureerbaar pad naar het Beancount bestand.
+- Initial release of the Fava add-on for Home Assistant.
+- Support all architectures: aarch64, amd64, armhf, armv7, i386.
+- Ingress support for direct access via the Home Assistant sidebar.
+- Configurable path to the Beancount file.

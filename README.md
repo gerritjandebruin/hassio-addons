@@ -14,17 +14,17 @@
 
 Fava is a web interface for [Beancount](https://beancount.github.io/), a double-entry bookkeeping system.
 
-## Installatie
+## Installation
 
-1. Klik op de knop hierboven, of voeg de repository handmatig toe via **Instellingen → Add-ons → Add-on Store → ⋮ → Repositories**:
+1. Click the button above, or add the repository manually via **Settings → Add-ons → Add-on Store → ⋮ → Repositories**:
    ```
    https://github.com/gerritjandebruin/hassio-addons
    ```
-2. Zoek naar de gewenste add-on en klik op **Installeren**.
+2. Search for the desired add-on and click **Install**.
 
 ---
 
-_Deze repository is gegenereerd met behulp van [Claude Sonnet](https://www.anthropic.com/claude) van Anthropic._
+_This repository was created with the help of [Claude Sonnet](https://www.anthropic.com/claude) by Anthropic._
 
 [fava]: fava/
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg

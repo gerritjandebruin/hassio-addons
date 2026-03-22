@@ -1,45 +1,45 @@
 # Fava - Home Assistant Add-on
 
-Fava is een webinterface voor [Beancount](https://beancount.github.io/), een double-entry boekhoudprogramma op basis van platte tekstbestanden.
+Fava is a web interface for [Beancount](https://beancount.github.io/), a double-entry bookkeeping system based on plain text files.
 
-## Vereisten
+## Requirements
 
-Je hebt een geldig `.beancount` bestand nodig. Plaats dit bestand in de `/share` map van Home Assistant, zodat de add-on er toegang toe heeft.
+You need a valid `.beancount` file. Place this file in the `/share` directory of Home Assistant so the add-on can access it.
 
-Voorbeeld:
+Example:
 ```
 /share/beancount/finances.beancount
 ```
 
-## Configuratie
+## Configuration
 
-| Optie | Type | Standaard | Beschrijving |
+| Option | Type | Default | Description |
 |---|---|---|---|
-| `beancount_file` | `str` | `/share/beancount/finances.beancount` | Volledig pad naar het Beancount bestand |
+| `beancount_file` | `str` | `/share/beancount/finances.beancount` | Full path to the Beancount file |
 
-### Voorbeeld configuratie
+### Example configuration
 
 ```yaml
 beancount_file: /share/beancount/finances.beancount
 ```
 
-## Gebruik
+## Usage
 
-1. Stel het pad naar je `.beancount` bestand in via de add-on configuratie.
-2. Start de add-on.
-3. Open Fava via de zijbalk van Home Assistant (Ingress) of via `http://<ha-ip>:5000`.
+1. Set the path to your `.beancount` file in the add-on configuration.
+2. Start the add-on.
+3. Open Fava via the Home Assistant sidebar (Ingress).
 
-## Beancount bestand aanmaken
+## Creating a Beancount file
 
-Een minimaal `.beancount` bestand ziet er als volgt uit:
+A minimal `.beancount` file looks like this:
 
 ```beancount
-option "title" "Mijn Financiën"
+option "title" "My Finances"
 option "operating_currency" "EUR"
 
-2024-01-01 open Assets:Bank:Betaalrekening  EUR
-2024-01-01 open Expenses:Boodschappen       EUR
-2024-01-01 open Income:Salaris              EUR
+2024-01-01 open Assets:Bank:Checking  EUR
+2024-01-01 open Expenses:Groceries    EUR
+2024-01-01 open Income:Salary         EUR
 ```
 
-Zie de [Beancount documentatie](https://beancount.github.io/docs/) voor meer informatie.
+See the [Beancount documentation](https://beancount.github.io/docs/) for more information.

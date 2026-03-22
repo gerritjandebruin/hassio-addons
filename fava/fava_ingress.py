@@ -9,6 +9,7 @@ This wrapper sets SCRIPT_NAME so Flask generates correct URLs with the
 ingress prefix, while keeping routing at / where the requests actually arrive.
 """
 import os
+import signal
 import sys
 
 from cheroot.wsgi import Server
@@ -42,7 +43,8 @@ def main():
     if prefix:
         app.wsgi_app = IngressMiddleware(app.wsgi_app, prefix)
 
-    server = Server(("0.0.0.0", port), app)
+    server = Server(("127.0.0.1", port), app)
+    signal.signal(signal.SIGTERM, lambda *_: server.stop())
     try:
         server.start()
     except KeyboardInterrupt:

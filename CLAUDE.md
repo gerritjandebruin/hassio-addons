@@ -1,6 +1,6 @@
 # Project: hassio-addons
 
 ## Fava add-on
-- Minimaal beancount 3.x vereist (beancount 3.x vereist compilatie via build-base/python3-dev)
-- Gebruik `uv` voor package installatie
-- Multi-arch ondersteuning via build.yaml met `ARG BUILD_FROM`
+- Requires beancount 3.x minimum (beancount 3.x requires compilation via build-base/python3-dev)
+- Use `uv` for package installation
+- Multi-arch support via build.yaml with `ARG BUILD_FROM`
