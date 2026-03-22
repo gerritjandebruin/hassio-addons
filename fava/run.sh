@@ -11,4 +11,4 @@ if [ ! -r "${BEANCOUNT_FILE}" ]; then
     exit 1
 fi
 
-exec fava --host 0.0.0.0 --port "${INGRESS_PORT}" --prefix "${INGRESS_ENTRY}" "${BEANCOUNT_FILE}"
+exec python3 /fava_ingress.py "${BEANCOUNT_FILE}" "${INGRESS_PORT}" "${INGRESS_ENTRY}"
