@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.7
+
+- Update base images from Python 3.12 / Alpine 3.18 to Python 3.13 / Alpine 3.21.
+- Bind server to `127.0.0.1` instead of `0.0.0.0` for ingress-only access.
+- Add `SIGTERM` signal handling for clean shutdown.
+- Translate all documentation to English.
+
 ## 1.0.6
 
 - Add beancount file directory to `sys.path` so local plugins can be found.
