@@ -1,6 +1,6 @@
 name: "Fava"
 description: "Fava is a web interface for Beancount, a double-entry bookkeeping system."
-version: "1.0.2"
+version: "1.0.3"
 slug: "fava"
 init: false
 arch:
